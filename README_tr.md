@@ -1,3 +1,9 @@
+```md
+# Müzik Albümü Görevleri
+
+Aşağıdaki nesneye göre:
+
+```js
 const album = {
   artist: "The Clash",
   title: "The Clash",
@@ -35,40 +41,35 @@ const album = {
     },
   ],
 };
+```
 
-/*
-Task 1
+## Görev 1
 
-Print the `title` and `duration` of the 6th song in the 
-tracklist 
+Tracklist içerisindeki 6. şarkının `title` (başlık) ve `duration` (süre) bilgilerini yazdırın.
 
-Expected output:
+Beklenen çıktı:
+
+```plaintext
 What's my name (1:40)
-*/
+```
 
-console.log(`${album.tracklist[5].title} ( ${album.tracklist[5].duration})`);
+## Görev 2
 
-/*
-Task 2
+`credits` özelliğine bakarak, listedeki ilk müzisyenin adını ve çaldığı enstrümanları (virgülle ayrılmış şekilde) yazdırın.
 
-Looking at the `credits` property, print the name and instruments 
-(separated by commas) of the first musician in the list.
+Beklenen çıktı:
 
-Expected output:
+```plaintext
 Joe Strummer: Guitar, Vocals
-*/
-console.log("\nFirst musician:");
-console.log(`${album.credits[0].name}: ${album.credits[0].instruments.join(", ")}`);
+```
 
+## Görev 3
 
-/*
-Task 3
+Bir döngü kullanarak, tüm şarkı başlıklarını numaralandırarak yazdırın (1'den başlayarak).
 
-Using a loop, print all the track titles, numbering them 
-starting from 1, like shown below
+Beklenen çıktı:
 
-Expected output:
-
+```plaintext
 1. Janie Jones
 2. Remote Control
 3. I'm So Bored With The U.S.A.
@@ -80,28 +81,18 @@ Expected output:
 9. Career Opportunities
 10. 48 Hours
 11. Garageland
-*/
+```
 
-console.log("\nTracklist:");
-for (let i = 0; i < album.tracklist.length; i++) {
-  console.log(`${i + 1}. ${album.tracklist[i].title}`);
-}
+## Görev 4
 
-/*
-Task 4
+Nesnedeki `credits` özelliğini kullanarak, her bir grup üyesinin adını ve çaldığı enstrümanları yazdırın.
 
-Using the `credits` property in the object, print each band 
-component together with the instruments they play.
+Beklenen çıktı:
 
-Expected output:
-
+```plaintext
 Joe Strummer: Guitar, Vocals
 Mick Jones: Guitar, Vocals
 Paul Simonon: Bass Guitar
 Tory Crimes: Drums
-*/
-
-console.log("\nBand members:");
-for (let i = 0; i < album.credits.length; i++) {
-  console.log(`${album.credits[i].name}: ${album.credits[i].instruments.join(", ")}`);
-}
+```
+```

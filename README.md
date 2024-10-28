@@ -1,7 +1,9 @@
+```md
+# Music Album - Solution Guide
 
-# Music album
+This solution provides JavaScript code for accessing and manipulating properties in an object structure representing a music album.
 
-Given the object below
+## Given Album Object
 
 ```js
 const album = {
@@ -43,32 +45,52 @@ const album = {
 };
 ```
 
-## Task 1
+### Task 1
 
-Print the `title` and `duration` of the 6th song in the tracklist 
+Print the title and duration of the 6th song in the tracklist.
 
-Expected output:
-
-```plaintext
-What's my name (1:40)
+**Solution:**
+```js
+console.log(`${album.tracklist[5].title} (${album.tracklist[5].duration})`);
 ```
 
-## Task 2
+**Expected Output:**
+```plaintext
+What's My Name (1:40)
+```
 
-Looking at the `credits` property, print the name and instruments (separated by commas) of the first musician in the list.
+---
 
+### Task 2
 
-Expected output:
+Print the name and instruments (separated by commas) of the first musician in the credits.
+
+**Solution:**
+```js
+console.log("\nFirst musician:");
+console.log(`${album.credits[0].name}: ${album.credits[0].instruments.join(", ")}`);
+```
+
+**Expected Output:**
 ```plaintext
 Joe Strummer: Guitar, Vocals
 ```
 
-## Task 3
+---
 
-Using a loop, print all the track titles, numbering them starting from 1, like shown below
+### Task 3
 
-Expected output:
+Using a loop, print all the track titles, numbering them starting from 1.
 
+**Solution:**
+```js
+console.log("\nTracklist:");
+for (let i = 0; i < album.tracklist.length; i++) {
+  console.log(`${i + 1}. ${album.tracklist[i].title}`);
+}
+```
+
+**Expected Output:**
 ```plaintext
 1. Janie Jones
 2. Remote Control
@@ -83,16 +105,26 @@ Expected output:
 11. Garageland
 ```
 
-## Task 4
+---
 
-Using the `credits` property in the object, print each band component together with the instruments they play.
+### Task 4
 
-Expected output:
+Print each band member's name and the instruments they play.
 
+**Solution:**
+```js
+console.log("\nBand members:");
+for (let i = 0; i < album.credits.length; i++) {
+  console.log(`${album.credits[i].name}: ${album.credits[i].instruments.join(", ")}`);
+}
+```
+
+**Expected Output:**
 ```plaintext
 Joe Strummer: Guitar, Vocals
 Mick Jones: Guitar, Vocals
 Paul Simonon: Bass Guitar
 Tory Crimes: Drums
 ```
->>>>>>> b932504 (Initial commit)
+
+--- 
